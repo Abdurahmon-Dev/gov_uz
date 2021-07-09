@@ -26,4 +26,9 @@
     margin-top: 40px;
     cursor: pointer;
     color: black !important;
+    transition: 0.3s ease;
+  }
+  
+  .Contanier-card button:hover{
+    background-color: grey;
   }

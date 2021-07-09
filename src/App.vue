@@ -2,11 +2,17 @@
   <div style="background:#E5E5E5; min-height:100vh;">
     <BaseHeader/>
     <div class="enter-card">
-      <EnterCard id="a"/>
-      <EnterCard id="a"/>
-      <EnterCard id="a"/>
-      <EnterCard id="a"/>
+      <EnterCard :title="'Jismoniy Shaxslar uchun'" @open="openModal" id="a"/>
+      <EnterCard :title="'Yuridik shaxslar uchun'" @open="openModal" id="b"/>
+      <EnterCard :title="'Avto yo`lovchilar uchun'" @open="openModal" id="c"/>
+      <EnterCard :title="'Yana nimadir uchun'" @open="openModal"  id="d"/>
     </div>
+
+    <modal name="example">
+      <div>
+        <i class="ri-close-fill close_icon"></i>
+      </div>
+    </modal>
   </div>
 </template>
 
@@ -23,6 +29,15 @@ export default {
   },
   mounted() {
       animation('a');
+      animation('b');
+      animation('c');
+      animation('d');
+
+  },
+  methods: {
+    openModal() {
+          this.$modal.show('example');
+    }
   }
 }
 </script>
@@ -39,6 +54,5 @@ export default {
     gap: 20px;
     flex-wrap: wrap;
     margin-top: 160px;
-    
   }
 </style>

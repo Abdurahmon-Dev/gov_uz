@@ -1,12 +1,10 @@
 <template>
-  <div>
       <header>
           <div class="header-title">
               <img src="@/assets/conter.png" alt="">
               <h1 class="area">my.gov.uz</h1>
           </div>
       </header>
-  </div>
 </template>
 
 <script>
