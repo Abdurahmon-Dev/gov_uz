@@ -2,7 +2,7 @@
       <header>
           <div class="header-title">
               <img src="@/assets/conter.png" alt="">
-              <h1 class="area">my.gov.uz</h1>
+              <h1 @click="$router.push('/home')" class="area">my.gov.uz</h1>
           </div>
       </header>
 </template>
@@ -15,6 +15,64 @@ export default {
 
 <style>
     @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-    @import url(./header.css);
+    header {
+    height: 70px;
+    background-color: #fff;
+}
+.area {
+  transition: 0.5s ;
+}
+.area:hover {
+    text-align: center;
+    font-size: 3em;
+    color: #fff;
+    letter-spacing: -7px;
+    font-weight: 700;
+    text-transform: uppercase;
+    animation: blur .75s ease-out infinite;
+    text-shadow: 0px 0px 5px #fff, 0px 0px 7px #fff;
+
+  }
+  
+  @keyframes blur {
+    from {
+      text-shadow:0px 0px 10px #fff,
+        0px 0px 10px #fff, 
+        0px 0px 25px #fff,
+        0px 0px 25px #fff,
+        0px 0px 25px #fff,
+        0px 0px 25px #fff,
+        0px 0px 25px #fff,
+        0px 0px 25px #fff,
+        0px 0px 50px #fff,
+        0px 0px 50px #fff,
+        0px 0px 50px #7B96B8,
+        0px 0px 150px #7B96B8,
+        0px 10px 100px #7B96B8,
+        0px 10px 100px #7B96B8,
+        0px 10px 100px #7B96B8,
+        0px 10px 100px #7B96B8,
+        0px -10px 100px #7B96B8,
+        0px -10px 100px #7B96B8;
+    }
+  }
+.header-title {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.header-title img {
+    width: 2.9em;
+    height: 2.9em;
+    margin-top: 7px;
+ }
+ .header-title h1 {
+     font-size: 2rem;
+     color: #0082C1;
+     cursor: pointer;
+     margin-top: 10px;
+ }
 
 </style>

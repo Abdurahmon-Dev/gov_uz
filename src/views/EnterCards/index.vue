@@ -1,3 +1,22 @@
+<template>
+    <main class="main">
+      <div class="Contanier-card my-style">
+        <div>
+          <img src="@/assets/not_image.png" alt="" />
+        </div>
+        <h3>{{ title }}</h3>
+        <button @click="$emit('open')">Boshlash</button>
+      </div>
+    </main>
+</template>
+
+<script>
+export default {
+  props: ['title']
+};
+</script>
+
+<style scoped>
 .Contanier-card div {
     border-radius: 50%;
     width: 80px;
@@ -30,5 +49,10 @@
   }
   
   .Contanier-card button:hover{
-    background-color: grey;
+    background-color: #0d6efd;
   }
+  .my-style {
+    width: 226px;
+    height: 303px;
+  }
+</style>
