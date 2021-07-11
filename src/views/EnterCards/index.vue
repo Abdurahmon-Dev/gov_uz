@@ -53,6 +53,6 @@ export default {
   }
   .my-style {
     width: 226px;
-    height: 303px;
+    /* height: 303px; */
   }
 </style>

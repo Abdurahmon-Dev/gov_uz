@@ -1,48 +1,39 @@
 <template>
   <main>
     <div class="enter-card">
-      <EnterCard :title="'Jismoniy Shaxslar uchun'" @open="openModal" id="a" />
-      <EnterCard :title="'Yuridik shaxslar uchun'" @open="openModal" id="b" />
-      <EnterCard :title="'Avto yo`lovchilar uchun'" @open="openModal" id="c" />
-      <EnterCard :title="'Uy oldi sotdi uchun'" @open="openModal" id="d" />
+      <EnterCard :title="titlesName.js " @open="openModal(titlesName.js,1)" id="a" />
+      <EnterCard :title="titlesName.ys" @open="openModal(titlesName.ys,2)" id="b" />
+      <EnterCard :title="titlesName.as" @open="openModal(titlesName.as,3)" id="c" />
+      <EnterCard :title="titlesName.uy" @open="openModal(titlesName.uy,4)" id="d" />
     </div>
-
-    <modal name="example" :width="402" :height="455">
-      <div class="modal-box">
-        <h3 class="text-primary fw-bold fs-4 mb-5">Yuridik shaxs</h3>
-
-        <p class="fw-normal">Passport raqami</p>
-        <input class="form-control" type="text" />
-        <br />
-        <p class="fw-normal">Passport raqami</p>
-        <input class="form-control mb-4" type="text" />
-        <button
-          class="w-100 btn btn-primary mt-5 rounded"
-          style="height: 63px"
-          @click="MorePage('/MoreInfo')"
-        >
-          Yuklash
-        </button>
-      </div>
-    </modal>
+    <BaseModal ref="ModalRef" />
   </main>
 </template>
 
 <script>
 import EnterCard from "./EnterCards/index.vue";
 import animation from "@/Animations/animation.js";
+import BaseModal from "@/components/BaseModal/index.vue";
 
 export default {
+  data() {
+    return {
+      titlesName: {
+        js: 'Jismoniy Shaxslar uchun',
+        ys: 'Yuridik shaxslar uchun',
+        as: 'Avto yo`lovchilar uchun',
+        uy: 'Uy oldi sotdi uchun'
+      }
+    }
+  },
   components: {
     EnterCard,
+    BaseModal
   },
   methods: {
-    openModal() {
-      this.$modal.show("example");
+    openModal(title,type) {
+      this.$refs.ModalRef.open(title,type);
     },
-    MorePage(value) {
-      this.$router.push(value)
-    }
   },
   mounted() {
     animation("a");
@@ -61,10 +52,5 @@ export default {
   flex-wrap: wrap;
   margin-top: 160px;
 }
-.modal-box {
-  padding: 40px;
-}
-.myModal {
-  border-radius: 70px;
-}
+
 </style>

@@ -7,16 +7,13 @@
         <p>Xabarnoma</p>
         <p>To’lovlar tarixi</p>
       </div>
-      
-      <div class="Contanier-card">
 
+      <div class="Contanier-card">
       </div>
       <div class="d-block">
         <div class="Contanier-card">
-
         </div>
         <div class="Contanier-card">
-
         </div>
       </div>
   </div>
@@ -33,6 +30,7 @@ export default {
     margin-top: 40px;
     padding: 0 200px;
     display: flex;
+    flex-wrap: wrap;
   }
   .Contanier-card {
     width: 262px;
