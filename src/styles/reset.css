@@ -41,6 +41,6 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-h2,h3,h4,h5,h6,p,span,strong {
+h2,h3,h4,h5,h6,p,span,strong,small,b {
 	font-family: 'Poppins', sans-serif;
 }

@@ -34,7 +34,7 @@
 
       <p class="fw-normal">Tex passport</p>
       <input class="form-control" type="text" />
-      <br />
+      <br/>
       <p class="fw-normal">Mashina raqami</p>
       <input class="form-control mb-4" type="text" />
       <button

@@ -10,7 +10,6 @@ import maincards from "./views/maincards.vue"
 const routes = [
     { path: '/MoreInfo', component: MoreInfo, props: true},
     { path: '/home', component: maincards, props: true},
-    
 ]
 
 const router = new VueRouter({
