@@ -77,8 +77,8 @@ export default {
         this.title = title;
         this.type = type
         console.log(type)
-        this.$modal.show("example");  
-    }
+        this.$modal.show("example");
+    },
   },
 };
 </script>
