@@ -13,6 +13,9 @@ export default {
   components: {
     BaseHeader,
   },
+  mounted() {
+    this.$router.push('/home');
+  }
 }
 </script>
 
